@@ -2,6 +2,12 @@
 
 `@mcp-frame/testing` provides `createMockMcpHost()` for unit tests and local examples.
 
+Install it from npm as a development dependency:
+
+```bash
+pnpm add -D @mcp-frame/testing
+```
+
 ```ts
 import { createMcpFrameBridge } from "@mcp-frame/core";
 import { createMockMcpHost } from "@mcp-frame/testing";

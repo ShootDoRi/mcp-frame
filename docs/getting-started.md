@@ -1,9 +1,15 @@
 # Getting Started
 
-Install the React package:
+Install the published React package from npm:
 
 ```bash
 pnpm add @mcp-frame/react
+```
+
+If your TypeScript React app does not already include React type packages, add them too:
+
+```bash
+pnpm add -D @types/react @types/react-dom
 ```
 
 Wrap your frame UI with `McpFrameProvider`, then read the latest tool result with `useToolResult()`.
@@ -52,3 +58,5 @@ if (result.validationError) {
 ```
 
 Use `useMcpToolCall()` for `tools/call`, `useSendMessage()` for `ui/message`, and `useUpdateModelContext()` for `ui/update-model-context`.
+
+For lower-level bridge work, install `@mcp-frame/core`. For local host simulation in tests, install `@mcp-frame/testing`.
