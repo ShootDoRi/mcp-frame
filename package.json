@@ -13,7 +13,7 @@
     "release:smoke": "node scripts/release-smoke.mjs",
     "release:check": "pnpm typecheck && pnpm test && pnpm build && pnpm --filter ./examples/todo-frame build && pnpm release:smoke",
     "test": "pnpm build:packages && pnpm -r --filter './packages/**' test:run",
-    "typecheck": "pnpm -r --filter './packages/**' typecheck && pnpm --filter todo-frame typecheck"
+    "typecheck": "pnpm build:packages && pnpm -r --filter './packages/**' typecheck && pnpm --filter todo-frame typecheck"
   },
   "devDependencies": {
     "@testing-library/react": "^16.3.0",
