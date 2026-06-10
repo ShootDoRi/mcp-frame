@@ -1,0 +1,32 @@
+{
+  "name": "create-mcp-frame",
+  "version": "0.1.0",
+  "description": "Create a minimal Vite React app frame powered by mcp-frame.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "create-mcp-frame": "./dist/index.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean --target node18",
+    "test": "node -e \"console.log('No CLI unit tests yet')\"",
+    "test:run": "node -e \"console.log('No CLI unit tests yet')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

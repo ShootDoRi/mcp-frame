@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mcp-frame/core": ["packages/core/src/index.ts"],
+      "@mcp-frame/react": ["packages/react/src/index.ts"],
+      "@mcp-frame/react/debug": ["packages/react/src/debug.ts"],
+      "@mcp-frame/testing": ["packages/testing/src/index.ts"]
+    }
+  }
+}
